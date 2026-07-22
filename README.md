@@ -1,4 +1,10 @@
-# 🚀 Em4nnn
+# 🚀 Em4nnn26
+
+<p align="center">
+  <a href="https://buymeacoffee.com/em4nn">
+    <img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black">
+  </a>
+</p> 
 
 <p align="center">
   <img src="https://img.shields.io/github/stars/Em4nn26/Em4nn26tool?style=for-the-badge">
@@ -77,6 +83,12 @@ First;
 1- Download the required libraries using the 99 option.
 2- After downloading, you can use them as you wish.
 
+## ⭐ Donate To Me!
+<p align="center">
+  <a href="https://buymeacoffee.com/em4nn">
+    <img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black">
+  </a>
+</p>
 ---
 
 ## 🌍 Türkçe
@@ -152,7 +164,11 @@ Pull request'ler kabul edilir. Büyük değişiklikler için önce issue açın�
 
 ## ⭐ Destek
 
-Projeyi beğendiysen ⭐ bırakmayı unutma!
+<p align="center">
+  <a href="https://buymeacoffee.com/em4nn">
+    <img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black">
+  </a>
+</p>
 
 
 
