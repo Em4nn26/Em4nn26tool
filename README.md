@@ -36,10 +36,10 @@
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/Em4nn26/Em4nnn.git
+git clone https://github.com/Em4nn26/Em4nn26tool.git
 cd Em4nnn
-chmod +x em4nhackui.SH
-./em4nhackui.SH
+chmod +x em4nn26.SH
+./em4nn26.SH
 ```
 
 ---
