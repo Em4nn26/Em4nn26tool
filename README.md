@@ -1,4 +1,4 @@
-# 🚀 Em4nnn26
+# 🚀 Em4nnn26Tool
 
 <p align="center">
   <a href="https://buymeacoffee.com/em4nn">
