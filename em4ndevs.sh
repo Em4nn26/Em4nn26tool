@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ==========================================
-# RENK TANIMLARI (ANSI 256 Color)
+# RENK VE STİL TANIMLARI (ANSI 256 Color)
 # ==========================================
 BOLD='\033[1m'
 DIM='\033[2m'
@@ -11,25 +11,26 @@ GREEN='\033[38;5;82m'
 YELLOW='\033[38;5;226m'
 RED='\033[38;5;196m'
 GRAY='\033[38;5;240m'
+WHITE='\033[38;5;255m'
 NC='\033[0m'
 
 # ==========================================
-# AÇILIŞ VE YÜKLEME ANİMASYONU
+# AÇILIŞ ANİMASYONU VE ASCII BANNER
 # ==========================================
 boot_animation() {
     clear
-    echo -e "${PURPLE}"
-    echo "  ██████╗███╗   ███╗██████╗ ███╗   ██╗"
-    echo "  ██╔════╝████╗ ████║██╔══██╗████╗  ██║"
-    echo "  █████╗  ██╔████╔██║██████╔╝██╔██╗ ██║"
-    echo "  ██╔══╝  ██║╚██╔╝██║██╔══██╗██║╚██╗██║"
-    echo "  ███████╗██║ ╚═╝ ██║██║  ██║██║ ╚████║"
-    echo "  ╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝"
+    echo -e "${PURPLE}${BOLD}"
+    echo "  ███████╗███╗   ███╗██╗  ██╗███╗   ██╗███╗   ██╗"
+    echo "  ██╔════╝████╗ ████║██║  ██║████╗  ██║████╗  ██║"
+    echo "  █████╗  ██╔████╔██║███████║██╔██╗ ██║██╔██╗ ██║"
+    echo "  ██╔══╝  ██║╚██╔╝██║╚════██║██║╚██╗██║██║╚██╗██║"
+    echo "  ███████╗██║ ╚═╝ ██║     ██║██║ ╚████║██║ ╚████║"
+    echo "  ╚══════╝╚═╝     ╚═╝     ╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝"
     echo -e "${NC}"
-    echo -e "${CYAN}${BOLD}           [ Em4nn Hacking UI ]${NC}\n"
+    echo -e "${CYAN}${BOLD}         [  SYSTEM DIAGNOSTICS & MANAGEMENT  ]${NC}\n"
     
-    echo -n -e "  ${DIM}Arayüz modülleri yükleniyor: ${NC}["
-    for i in {1..20}; do
+    echo -n -e "  ${DIM}Arayüz modülleri çekiliyor: ${NC}["
+    for i in {1..22}; do
         echo -n -e "${GREEN}█${NC}"
         sleep 0.02
     done
@@ -38,29 +39,35 @@ boot_animation() {
 }
 
 # ==========================================
-# SİSTEM BİLGİ PANELİ
+# PREMIUM SİSTEM BİLGİ PANELİ
 # ==========================================
 show_info() {
-    local date_str=$(date +"%d %B %Y %H:%M:%S")
+    local date_str=$(date +"%d %B %Y | %H:%M:%S")
     local host_str=$(hostname)
 
-    echo -e "${GRAY}┌──────────────────────────────────────────────────────────┐${NC}"
-    echo -e "${GRAY}│${NC} ${CYAN}Tarih & Saat :${NC} $date_str"
-    echo -e "${GRAY}│${NC} ${CYAN}Cihaz Adı    :${NC} $host_str"
-    echo -e "${GRAY}└──────────────────────────────────────────────────────────┘${NC}\n"
+    echo -e "${PURPLE}╔══════════════════════════════════════════════════════════╗${NC}"
+    echo -e "${PURPLE}║${NC} ${CYAN}${BOLD}Tarih & Saat :${NC} ${WHITE}$date_str${NC}"
+    echo -e "${PURPLE}║${NC} ${CYAN}${BOLD}Cihaz Adı    :${NC} ${WHITE}$host_str${NC}"
+    echo -e "${PURPLE}╚══════════════════════════════════════════════════════════╝${NC}\n"
 }
 
 # ==========================================
-# MENÜ
+# PREMIUM HEADER & MENÜ
 # ==========================================
+show_header() {
+    echo -e "${CYAN}┌──────────────────────────────────────────────────────────┐${NC}"
+    echo -e "${CYAN}│${NC}  ${WHITE}${BOLD}⚡ Em4nn Hacking UI ${GRAY}|${NC} ${GREEN}v2.5 Premium Edition in 2026${NC}       ${CYAN}│${NC}"
+    echo -e "${CYAN}└──────────────────────────────────────────────────────────┘${NC}"
+}
+
 menu() {
     echo -e "${PURPLE}${BOLD}  ═══ YÖNTEMLERİ SEÇİN ═══${NC}\n"
 
-    echo -e "  ${RED}[1]${NC} [Boş / İleride Eklenecek]"
-    echo -e "  ${RED}[2]${NC} [Boş / İleride Eklenecek]"
-    echo -e "  ${RED}[3]${NC} [Boş / İleride Eklenecek]"
+    echo -e "  ${RED}[1]${NC} ${GRAY}Phishing${NC}"
+    echo -e "  ${RED}[2]${NC} ${GRAY}SMS Bomber 2026${NC}"
+    echo -e "  ${RED}[3]${NC} ${GRAY}Active Kamera Hack${NC}"
     echo -e "  ${RED}[4]${NC} Güncel Yardım Paneli"
-    echo -e "  ${RED}[5]${NC} Em4nn Server System Checker [Aktif Değil]"
+    echo -e "  ${RED}[5]${NC} Netflix Checker${YELLOW}[Aktif Değil]${NC}"
     echo -e "  ${RED}[6]${NC} Ping Testi"
     echo -e "  ${RED}[7]${NC} Traceroute"
     echo -e "  ${RED}[8]${NC} Port Tarama (Nmap)"
@@ -70,7 +77,7 @@ menu() {
     echo -e "  ${RED}[12]${NC} CPU / RAM Durumu"
     echo -e "  ${RED}[13]${NC} Disk Kullanımı"
     echo -e "  ${RED}[14]${NC} Ağ Trafiği İzleme"
-    echo -e "  ${RED}[15]${NC} Link Kısaltma / QR Kod Oluşturma"
+    echo -e "  ${RED}[15]${NC} QR Kod Oluşturma"
     echo -e "  ${RED}[16]${NC} t.me/em4nhackingui"
     echo -e "  ${RED}[99]${NC} Gerekli kütüphaneleri Yükle"
     echo -e "  ${RED}[0]${NC} Çıkış"
@@ -78,33 +85,40 @@ menu() {
     echo -e "${GRAY}──────────────────────────────────────────────────────────${NC}"
 }
 
-# İlk açılış animasyonu
+# İlk çalıştırma animasyonu
 boot_animation
 
 # Ana Döngü
 while true; do
     clear
-    echo -e "${CYAN}${BOLD}=== Em4nn Hacking UI ===${NC}\n"
+    show_header
+    echo
     show_info
     menu
     
-    read -p "Seçiminiz >> " choice
+    echo -n -e "${CYAN}${BOLD}Seçiminiz >> ${NC}"
+    read choice
     echo
 
     case $choice in
-        1|2|3)
-            echo -e "${YELLOW}Bu modül henüz eklenmedi veya boş bırakıldı.${NC}"
-            read -p "Devam etmek için Enter..."
+        1) 
+           cd ~/zphisher && bash zphisher.sh
+           ;;
+        2)
+            cd ~/Enough-Reborn && python3 enough.py
+            ;;
+        3)
+            cd ~/CamHack && bash CamHack.sh
             ;;
         4)
             echo -e "${PURPLE}──────────────────────${NC}"
-            echo -e "⚡️  ÜCRETSİZ YARDIM VE BİLGİ PANELİ"
+            echo -e "⚡  ÜCRETSİZ YARDIM VE BİLGİ PANELİ"
             echo -e "${PURPLE}──────────────────────${NC}"
             echo -e "En Güncel Duyurular: t.me/em4nhackingui"
             read -p "Devam etmek için Enter..."
             ;;
         5)
-            echo -e "${YELLOW}Em4nn Server System Checker şu an aktif değil.${NC}"
+            echo -e "${YELLOW} şu an aktif değil.${NC}"
             read -p "Devam etmek için Enter..."
             ;;
         6)
@@ -181,12 +195,39 @@ while true; do
             read -p "Devam etmek için Enter..."
             ;;
         99)
-            echo -e "${YELLOW}Gerekli kütüphaneler kuruluyor...${NC}"
+            echo -e "${Y}Kütüphaneler ve gerekli projeler kuruluyor...${W}"
+            
+            # Sistem paketleri
             sudo apt update && sudo apt upgrade -y
-            sudo apt install -y curl whois traceroute nmap iftop git wget unzip python3 python3-pip qrencode
-            echo -e "${GREEN}Kurulum tamamlandı!${NC}"
-            read -p "Devam etmek için Enter..."
-            ;;
+            sudo apt install -y curl whois traceroute nmap iftop git wget unzip python3 python3-pip chromium-browser chromium-chromedriver qrencode
+            
+            # Python kütüphaneleri
+            pip3 install --upgrade pip
+            pip3 install selenium rich
+            
+            # Reposlar
+            if [ ! -d "$HOME/zphisher" ]; then
+                git clone https://github.com/htr-tech/zphisher.git "$HOME/zphisher"
+            else
+                echo -e "${CYAN}Zphisher zaten sizde mevcut, atlanıyor.${NC}"
+            fi
+            
+            if [ ! -d "$HOME/Enough-Reborn" ]; then
+                git clone https://github.com/thewhiteh4t/Enough-Reborn.git "$HOME/Enough-Reborn"
+            else
+                echo -e "${CYAN}Enough-Reborn zaten sizde mevcut, atlanıyor.${NC}"
+            fi
+            
+            CAMHACK_REPO="https://github.com/Devil-Tigers/CamHack.git"
+            if [ ! -d "$HOME/CamHack" ]; then
+                git clone "$CAMHACK_REPO" "$HOME/CamHack"
+            else
+                echo -e "${CYAN} CamHack zaten sizde mevcut, atlanıyor.${NC}"
+            fi
+            
+           echo -e "${GREEN}Kurulum tamamlandı!${NC}"
+            read -p "Devam etmek için Enter..." 
+          ;;
         0)
             echo -e "${CYAN}Çıkış yapılıyor...${NC}"
             exit 0
